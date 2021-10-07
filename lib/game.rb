@@ -1,13 +1,14 @@
 class Game
-  attr_reader :player
+  attr_reader :player, :player2
   
-  def initialize(player)
+  def initialize(player, player2 = nil)
     @player = player
+    @player2 = player2
     @computer_choices = ["Rock", "Paper", "Scissors"]
   end
 
-  def self.create(player)
-    @game = Game.new(player)
+  def self.create(player, player2 = nil)
+    !player2.nil? ? @game = Game.new(player, player2) : @game = Game.new(player)
   end
 
   def self.instance
