@@ -11,6 +11,10 @@ class RockPaperScissors < Sinatra::Base
     erb :index
   end
 
+  get '/single_player' do
+    erb :single_player
+  end
+
   post '/player' do
     player = Player.new(params[:name])
     @game = Game.create(player)

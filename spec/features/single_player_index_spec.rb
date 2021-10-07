@@ -1,6 +1,6 @@
 feature 'home page' do
   scenario 'visiting home page should ask user to enter their name' do
-    visit '/'
+    visit '/single_player'
     expect(page).to have_content('Enter your name:')
   end
 
